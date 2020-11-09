@@ -1,7 +1,29 @@
+let x: number;
+let i: number;
 light.setBrightness(5)
-while (true) {
-    light.setAll(light.rgb(255, 0, 255))
+/** while True:
+    light.set_all(light.rgb(255,0,255))
     pause(1000)
     light.clear()
     pause(1000)
+x = 0
+for i in range(10):
+    light.set_pixel_color(x, light.rgb(255,0,255))
+    pause(300)
+    light.clear()
+    x=x+1
+ */
+while (true) {
+    x = 0
+    for (i = 0; i < 10; i++) {
+        light.setPixelColor(x, light.rgb(255, 0, 255))
+        pause(300)
+        x = x + 1
+    }
+    x = 0
+    for (i = 0; i < 10; i++) {
+        light.setPixelColor(x, light.rgb(0, 0, 0))
+        pause(300)
+        x = x + 1
+    }
 }
